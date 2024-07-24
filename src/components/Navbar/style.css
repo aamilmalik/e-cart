@@ -1,0 +1,41 @@
+body::-webkit-scrollbar{
+    display: none;
+}
+nav .row .col{
+    background-color: #1a1477;;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;  
+}
+.item{
+    align-items: center;
+    width: auto;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+.item input{
+    width: 20vw;
+    position: relative;
+    top: 10%;
+    left: 5%;
+    transform: scale(2,1.3);
+    border-radius: 7px;
+    font-size: 1.2rem; 
+    padding-left: 0.7rem; 
+}
+
+.cart-cont{
+    font-size: 1.2rem;
+    position: relative;
+    right: 7rem;
+}
+.e-cart{
+    position: relative;
+    top: 20%;
+    left: 8%;
+    width: auto;    
+}
