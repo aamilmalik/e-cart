@@ -15,6 +15,7 @@ function Product({ items, cart, setCart }) {
     });
   };
 
+  const path = location.pathname != "/product" ? "/product" : null;
 
   return (
     <div className="container my-5">
@@ -26,7 +27,7 @@ function Product({ items, cart, setCart }) {
               className="col-lg-4 col-md-6 col-sm-12 my-3 text-center"
             >
               <div className="card" style={{ width: "18rem" }}>
-                <Link to={`product/${product.id}`}>
+                <Link to={`${path}/${product.id}`}>
                   <img
                     src={product.imgSrc}
                     className="card-img-top"

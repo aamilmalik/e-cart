@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "./style.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "../Header";
 import { FaCartArrowDown } from "react-icons/fa";
+import { HiOutlineHome } from "react-icons/hi";
 
 function Navbar({ setData, cart }) {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +22,7 @@ function Navbar({ setData, cart }) {
       <div className="row">
         <div className="col">
           <Link to="/" className="item e-cart">
-            E-cart
+             <HiOutlineHome className="home-icon" />
           </Link>
           <form className="item" onSubmit={handleSubmit}>
             <input
@@ -38,7 +41,10 @@ function Navbar({ setData, cart }) {
             </Link>
         </div>
       </div>
-      <Header setData={setData} />
+        {
+          location.pathname == "/" ? <Header setData={setData} />  : ""
+        }
+      
     </nav>
   );
 }

@@ -21,7 +21,7 @@ nav .row .col{
     width: 20vw;
     position: relative;
     top: 10%;
-    left: 5%;
+    left: 3%;
     transform: scale(2,1.3);
     border-radius: 7px;
     font-size: 1.2rem; 
@@ -38,4 +38,10 @@ nav .row .col{
     top: 20%;
     left: 8%;
     width: auto;    
+}
+nav .row .col .e-cart .home-icon{
+    font-size: 2rem;
+    background-color: #1a1477;
+    color: #f5f5f5;
+
 }

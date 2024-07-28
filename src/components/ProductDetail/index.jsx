@@ -46,7 +46,7 @@ function ProductDetail({cart,setCart}) {
         </div>
       </div>
 
-      <h1 className="text-center">Related Products</h1>
+      <h1 className="text-center text-danger border-top">Related Products</h1>
        <Product items={relatedProducts} cart={cart} setCart={setCart} />
 
     </>
