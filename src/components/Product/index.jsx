@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { v4 as uuidv4 } from "uuid";
 
 function Product({ items, cart, setCart }) {
   const location = useLocation();
@@ -15,7 +16,7 @@ function Product({ items, cart, setCart }) {
     });
   };
 
-  const path = location.pathname != "/product" ? "/product" : null;
+  const path = location.pathname != "/product" ? "/product" : "";
 
   return (
     <div className="container my-5">
@@ -23,8 +24,8 @@ function Product({ items, cart, setCart }) {
         {items.map((product) => {
           return (
             <div
-              key={product.id}
-              className="col-lg-4 col-md-6 col-sm-12 my-3 text-center"
+              key={uuidv4()}
+              className="col-lg-4 col-md-6 col-sm-12 my-3 text-center d-flex justify-content-center"
             >
               <div className="card" style={{ width: "18rem" }}>
                 <Link to={`${path}/${product.id}`}>
@@ -42,13 +43,15 @@ function Product({ items, cart, setCart }) {
                   </button>
 
                   {location.pathname == "/cart" ? (
-                   
-                      <>
-                       <a href={product.amazonLink}
-                      className="btn btn-warning"
-                      >Buy Now
-                      </a>                    
-                      </>
+                    <>
+                      <a
+                        href={product.amazonLink}
+                        target="_blank"
+                        className="btn btn-warning"
+                      >
+                        Buy Now
+                      </a>
+                    </>
                   ) : (
                     <button
                       className="btn btn-warning"

@@ -27,7 +27,7 @@ function App() {
     localStorage.setItem("cartData", JSON.stringify(cart));
   }, [cart]);
   return (
-   <>
+  <>
    <Router>
     <Navbar cart={cart} setData={setData} />
     <Routes>
@@ -38,9 +38,7 @@ function App() {
       <Route path="/*" element={<PageNotFound />} />
     </Routes>
    </Router>
-     
-   
-   </>
+  </>
   )
 }
 

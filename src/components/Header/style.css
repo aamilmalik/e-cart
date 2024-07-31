@@ -16,3 +16,23 @@ header div:hover{
    transform: scale(1.1);
    color: #EEE8AA;
 }
+
+/* media query */
+@media screen and (max-width:767px){
+    header div{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:675px){
+    header div{
+        font-size: 14px;
+        font-weight: lighter;
+    }
+}
+
+@media screen and (max-width:575px){
+    header div{
+        font-weight: lighter;
+    }
+}
